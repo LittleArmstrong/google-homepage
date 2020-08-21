@@ -1,11 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    width: 100%;
+}
+
 #layout {
     display: grid;
-    grid-template-rows: repeat(4,auto);
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
     "header"
     "content"
-    "country"
     "footer"; 
+    height: 100%;
+    width: 100%;
 }
 
 #content {
@@ -16,16 +23,14 @@
 }
 
 #google-logo {
-    justify-self: center;
     width: 272px;
     height: 92;
     font-size: 13px;
-    padding-top: 109px;
+    margin-top: 109px;
 }
 
 #search {
     width: 500px;
-    margin: auto;
     border-radius: 25px;
     height: 34px;
     margin-top: 30px;
@@ -41,36 +46,36 @@
     grid-template-columns: repeat(2,auto) 1fr repeat(4,auto);
     grid-template-areas: 
     "about store . gmail bilder app anmelden";
-    grid-gap: 15px;
-    /* justify-self: center; */
+    /* grid-gap: 15px; */
     font-size: 13px;
     font-family: Arial, sans-serif;
     opacity: 0.75;
+    margin: 10px 25px;
+}
+.header-spacing{
+    margin-left: 15px;
 }
 
 #p-about {
     display: grid;
     grid-area: about;
-    padding-left: 15px;
-    margin: auto;
 }
 
 #p-store {
     display: grid;
     grid-area: store;
-    margin: auto;
 }
 
 #p-gmail {
     display: grid;
     grid-area: gmail;
-    margin: auto;
+
 }
 
 #p-bilder {
     display: grid;
     grid-area: bilder;
-    margin: auto;
+
 }
 
 #app-image {
@@ -83,13 +88,60 @@
     background-position: -132px -38px;
     opacity: .55;
     background-color: transparent;
-    margin: auto;
+    align-self: center;
+
 }
 
 #p-anmelden {
     display: grid;
     grid-area: anmelden;
-    padding-right: 15px;
-    margin: auto;
 }
 
+#footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "country country country"
+    "footer-left . footer-right";
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    color: rgba(0,0,0,.54);
+    background-color: #f2f2f2;
+    margin-right: 2px;
+}
+
+.footer-spacing{
+    margin-left: 20px;
+}
+
+#border{
+    grid-area: country;
+    align-self: center;
+    border: 1px solid #adadad;
+    width: 100%;
+}
+
+#country{
+    grid-area: country;
+    padding-left: 27px;
+    height: 10px;
+}
+
+#footer-left {
+    display: flex;
+    flex-direction: row;
+    padding-left: 27px;
+    grid-area: footer-left;
+    align-self: center;
+}
+
+
+#footer-right {
+    display: flex;
+    flex-direction: row;
+    grid-area: footer-right;
+    align-self: center;
+    margin-right: 20px;
+}
