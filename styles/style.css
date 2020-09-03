@@ -133,17 +133,18 @@ html, body {
 }
 
 #anmelden {
-    display: grid;
     grid-area: anmelden;
+    display: inline-block;
     color: #fff;
     font-weight: bold;
-    /* background: linear-gradient(to top,#4387fd,#4683ea); */
     background-color: rgb(12, 100, 241);
     border-radius: 2px;
     border: 1px solid rgb(12, 100, 241);
     line-height: 28px;
     height: 28px;
-    width: 90px;
+    padding-left: 13px;
+    padding-right: 13px;
+    text-decoration: none;
 }
 
 #anmelden:hover{
@@ -172,7 +173,7 @@ html, body {
 #border{
     grid-area: country;
     align-self: center;
-    border: 1px solid #adadad;
+    border: 1px solid #eaeaea;
     width: 100%;
 }
 
